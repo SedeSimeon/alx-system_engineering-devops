@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" -prinf "%f\n" | awk -F. "{prit $1}" | sort -f | xargs -l{} echo {} echo
+find . -type f -name "*.gif" | sort -f | cut 's/\(.*\/\)\(.*\)\..*/\2/' echo ""
